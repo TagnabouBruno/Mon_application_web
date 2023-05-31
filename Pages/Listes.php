@@ -73,17 +73,17 @@ $etudiants = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <th>Modification</th>
             <th>Suppression</th>
         </tr>
-        <?php foreach ($etudiants as $utilisateur): ?>
-        <tr>
-            <td><?php echo $utilisateur['id']; ?></td>
-            <td><?php echo $utilisateur['nom']; ?></td>
-            <td><?php echo $utilisateur['prenom']; ?></td>
-            <td><?php echo $utilisateur['date_de_naissance']; ?></td>
-            <td><?php echo $utilisateur['date_adhesion']; ?></td>
-            <td><?php echo $utilisateur['tuteur']; ?></td>
-            <td><a href="Modifier.php" class="color">Modifier</a></td>
-            <td><a href="#" class="color">Supprimer</a></td>
-        </tr>
+        <?php foreach ($etudiants as $row): 
+        echo '<tr>';
+            echo '<td>'.$row['id'].'</td>';
+            echo'<td>'.$row['nom'].'</td>';
+            echo'<td>'.$row['prenom'].'</td>';
+            echo'<td>'.$row['date_de_naissance'].'</td>';
+            echo'<td>'.$row['date_adhesion'].'</td>';
+            echo'<td>'.$row['tuteur'].'</td>';
+            echo'<td><a href="../Php/Modification.php?id='.$row['id'].'" class="color">Modifier</a></td>';
+            echo'<td> <a href="../Php/Suppression.php?id='.$row['id'].'" class="color">Supprimer</a></td>';
+       echo '</tr>'; ?>
         <?php endforeach; ?>
     </table>
     <p><a href="../Index.php" class="color">retour</a></p><br><br><br><br><br>

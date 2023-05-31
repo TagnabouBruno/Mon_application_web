@@ -35,7 +35,7 @@
     <div class="container">
         <div class="row">
           <div class="col">
-            <p class="liste"><a href="Pages/Listes.php" class="color">Listes</a></p>
+          <p class="liste"><a href="Pages/Listes.php" class="color"><button>Listes</button></a></p>
           </div>
         </div>
     </div>
